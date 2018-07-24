@@ -25,7 +25,7 @@ $( "input" ).keypress( function(event) {
 });
 
 // When delete button is clicked
-$( "li > button" ).click( function() {
+$( "ul" ).on( "click", "li > button", function() {
 
 	// Remove list item
 	$( this ).parent().remove();
@@ -33,7 +33,7 @@ $( "li > button" ).click( function() {
 
 
 // When list item is clicked
-$( "li" ).click( function() {
+$( "ul" ).on( "click", "li", function() {
 
 	// Toggle strikethrough
 	$( this ).children( "span" ).toggleClass( "crossed-off" );
