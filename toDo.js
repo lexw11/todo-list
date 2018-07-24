@@ -8,24 +8,26 @@
  * 6. Add animation
  */
 
+// Define variables
+var $input 	= $( "input" ),
+	$ul		= $( "ul" );
+
 // When enter key is pressed in input
-$( "input" ).keypress( function(event) {
+$input.keypress( function(event) {
 	
 	// Check if enter key is pressed
 	if ( event.which === 13 ) {
-		// Get new to-do item
-		var $newToDo = $( "input" ).val();
 
 		// Add new to-do item to list
-		$( "ul" ).append("<li><span>" + $newToDo + "</span> <button>Delete</button></li>");
+		$ul.append("<li><span>" + $( this ).val() + "</span> <button>Delete</button></li>");
 
 		// Clear input
-		$( "input" ).val( "" );
+		$( this ).val( "" );
 	}
 });
 
 // When delete button is clicked
-$( "ul" ).on( "click", "li > button", function() {
+$ul.on( "click", "li > button", function() {
 
 	// Remove list item
 	$( this ).parent().remove();
@@ -33,7 +35,7 @@ $( "ul" ).on( "click", "li > button", function() {
 
 
 // When list item is clicked
-$( "ul" ).on( "click", "li", function() {
+$ul.on( "click", "li", function() {
 
 	// Toggle strikethrough
 	$( this ).children( "span" ).toggleClass( "crossed-off" );
@@ -43,5 +45,5 @@ $( "ul" ).on( "click", "li", function() {
 $( "#input-toggle" ).click( function() {
 
 	// Show/hide input box
-	$( "input" ).toggle();
+	$input.toggle();
 });
