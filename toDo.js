@@ -14,15 +14,12 @@ var $input 	= $( "input" ),
 
 // When enter key is pressed in input
 $input.keypress( function(event) {
-	
 	// Check if enter key is pressed
 	if ( event.which === 13 ) {
-
 		// Add new to-do item to list
 		$ul.append(	'<li><span>' + 
 					$( this ).val() + 
 					'</span> <button aria-label="Delete"><i class="far fa-trash-alt"></i></button></li>');
-
 		// Clear input
 		$( this ).val( "" );
 	}
@@ -30,22 +27,20 @@ $input.keypress( function(event) {
 
 // When delete button is clicked
 $ul.on( "click", "li > button", function() {
-
 	// Remove list item
-	$( this ).parent().remove();
+	$( this ).parent().fadeOut( 500, function() {
+		$( this ).remove();
+	});
 });
-
 
 // When list item is clicked
 $ul.on( "click", "li", function() {
-
 	// Toggle strikethrough
 	$( this ).children( "span" ).toggleClass( "crossed-off" );
 });
 
 // When input toggle button is clicked
 $( "#input-toggle" ).click( function() {
-
 	// Show/hide input box
-	$input.toggle();
+	$input.slideToggle();
 });

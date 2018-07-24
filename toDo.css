@@ -45,14 +45,14 @@ h1 {
 	margin: 0;
 }
 
-input, li {
-	border-top: solid 2px #ddd;
-}
-
 input {
 	flex-basis: 100%;
 	border: none;
 	background: #eee;
+}
+
+input, li {
+	border-top: solid 2px #ddd;
 }
 
 ul {
@@ -85,13 +85,21 @@ input, button {
 /* ==================
     Buttons
    ================== */
+button, li {
+	cursor: pointer;
+}
+
 button {
 	border: none;
-	width: 3rem;
+	padding: 0;
 }
 
 button:hover {
 	opacity: 0.8;
+}
+
+button:active {
+	outline: none;
 }
 
 button i {
@@ -100,9 +108,16 @@ button i {
 
 #input-toggle {
 	background: none;
+	width: 3rem;
 }
 
 li button {
 	color: #fff;
 	background: #f45c42;
+	width: 0;
+	transition: 0.5s;
+}
+
+li:hover button {
+	width: 3rem;
 }
