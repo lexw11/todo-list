@@ -6,21 +6,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 	<!-- Custom Stylesheet -->
 	<link rel="stylesheet" href="toDo.css">
 
 	<title>To-Do List</title>
 </head>
 <body>
-	<h1>To-Do List</h1>
-	<button id="input-toggle">Show/Hide</button>
-	<input type="text" name="add-todo" placeholder="Add New To-Do">
-	<ul>
-		<li><span>Walk dog</span> <button>Delete</button></li>
-		<li><span>Feed cat</span> <button>Delete</button></li>
-		<li><span>Do coding assignment</span> <button>Delete</button></li>
-	</ul>
+	<div id="container">
+		<header>
+			<h1>To-Do List</h1>
+			<button id="input-toggle" aria-label="Show/Hide"><i class="fas fa-plus-circle"></i>
+
+</button>
+			<input type="text" name="add-todo" placeholder="Add New To-Do">
+		</header>	
+		<ul>
+			<li><span>Walk dog</span> <button aria-label="Delete"><i class="far fa-trash-alt"></i></button></li>
+			<li><span>Feed cat</span> <button aria-label="Delete"><i class="far fa-trash-alt"></i></button></li>
+			<li><span>Do coding assignment</span> <button aria-label="Delete"><i class="far fa-trash-alt"></i></button></li>
+		</ul>
+	</div>
 
 	<!-- jQuery -->
 	<script

@@ -19,7 +19,9 @@ $input.keypress( function(event) {
 	if ( event.which === 13 ) {
 
 		// Add new to-do item to list
-		$ul.append("<li><span>" + $( this ).val() + "</span> <button>Delete</button></li>");
+		$ul.append(	'<li><span>' + 
+					$( this ).val() + 
+					'</span> <button aria-label="Delete"><i class="far fa-trash-alt"></i></button></li>');
 
 		// Clear input
 		$( this ).val( "" );

@@ -1,8 +1,108 @@
+/* ==================
+    Layout
+   ================== */
+html {
+	min-height: 100%;
+}
+
 body {
-	font-family: sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	background: linear-gradient(#76dded, #fff);
+}
+
+body > * {
+	box-sizing: inherit;
+}
+
+#container {
+	width: 100%;
+	max-width: 400px;
+	margin: 100px auto;
+	overflow: hidden;
+	background: #fff;
+	border: solid 1px #ccc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+header, li {
+	display: flex;
+}
+
+header {
+	flex-wrap: wrap;
+}
+
+h1, input, li span {
+	padding: 1rem;
+}
+
+h1, li span {
+	flex-grow: 1;
+}
+
+h1 {
+	margin: 0;
+}
+
+input, li {
+	border-top: solid 2px #ddd;
+}
+
+input {
+	flex-basis: 100%;
+	border: none;
+	background: #eee;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* ==================
+    Font
+   ================== */
+body {
+	font-family: 'Nanum Gothic', sans-serif;
+	color: #333;
+}
+
+h1, #input-toggle {
+	color: #00c5ed;
+}
+
+input, button {
+	font-size: inherit;
 }
 
 .crossed-off {
 	text-decoration: line-through;
 	opacity: 0.5;
+}
+
+/* ==================
+    Buttons
+   ================== */
+button {
+	border: none;
+	width: 3rem;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+button i {
+	font-size: 1.5rem;
+}
+
+#input-toggle {
+	background: none;
+}
+
+li button {
+	color: #fff;
+	background: #f45c42;
 }
