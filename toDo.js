@@ -14,20 +14,27 @@ $( "input" ).keypress( function(event) {
 	// Check if enter key is pressed
 	if ( event.which === 13 ) {
 		// Get new to-do item
-		var newToDo = $( "input" ).val();
+		var $newToDo = $( "input" ).val();
 
 		// Add new to-do item to list
-		$( "ul" ).append("<li>" + newToDo + "</li>");
+		$( "ul" ).append("<li><span>" + $newToDo + "</span> <button>Delete</button></li>");
 
 		// Clear input
 		$( "input" ).val( "" );
 	}
 });
 
-
 // When delete button is clicked
 $( "li > button" ).click( function() {
 
 	// Remove list item
 	$( this ).parent().remove();
+});
+
+
+// When list item is clicked
+$( "li" ).click( function() {
+
+	// Toggle strikethrough
+	$( this ).children( "span" ).toggleClass( "crossed-off" );
 });
