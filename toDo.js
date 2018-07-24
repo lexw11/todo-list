@@ -8,7 +8,7 @@
  * 6. Add animation
  */
 
-// Add keypress event listener to input
+// When enter key is pressed in input
 $( "input" ).keypress( function(event) {
 	
 	// Check if enter key is pressed
@@ -22,4 +22,12 @@ $( "input" ).keypress( function(event) {
 		// Clear input
 		$( "input" ).val( "" );
 	}
+});
+
+
+// When delete button is clicked
+$( "li > button" ).click( function() {
+
+	// Remove list item
+	$( this ).parent().remove();
 });
