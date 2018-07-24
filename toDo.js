@@ -38,3 +38,10 @@ $( "ul" ).on( "click", "li", function() {
 	// Toggle strikethrough
 	$( this ).children( "span" ).toggleClass( "crossed-off" );
 });
+
+// When input toggle button is clicked
+$( "#input-toggle" ).click( function() {
+
+	// Show/hide input box
+	$( "input" ).toggle();
+});
